@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
             System.out.println("3.反射Constructor 对象" + "\t" + objectGenerate4.hashCode());
 
 
+
             // 4使用clone 构造对象
             ObjectGenerate objectGenerate2 = (ObjectGenerate) objectGenerate1.clone();
             System.out.println("4.clone objectGenerate1 对象" + "\t" + objectGenerate2.hashCode());
