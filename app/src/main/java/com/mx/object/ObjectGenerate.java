@@ -7,7 +7,15 @@ import java.io.Serializable;
  */
 
 public class ObjectGenerate implements Cloneable,Serializable {
-    public String name="Object";
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    private String name="123";
     public ObjectGenerate(){
         System.out.println("执行默认构造函数");
     }
@@ -28,24 +36,25 @@ public class ObjectGenerate implements Cloneable,Serializable {
 
     @Override
     public boolean equals(Object obj) {
-        if (this==obj){
-            return true;
-        }
-        if (obj instanceof ObjectGenerate){
-            return true;
-        }else {
-                ObjectGenerate objectGenerate= (ObjectGenerate) obj;
-            if (objectGenerate.name.equals(name)){
-                return true;
-
-            }else {
-                return false;
-            }
-        }
+        return super.equals(obj);
+//        if (this==obj){
+//            return true;
+//        }
+//        if (obj instanceof ObjectGenerate){
+//            return true;
+//        }else {
+//                ObjectGenerate objectGenerate= (ObjectGenerate) obj;
+//            if (objectGenerate.name.equals(name)){
+//                return true;
+//
+//            }else {
+//                return false;
+//            }
+//        }
     }
 
     /**
-     * 需重写clone函数
+     * 需重写clone函数，需重写clone函数，这样才能调用clone函数
      * */
     @Override
     protected Object clone() throws CloneNotSupportedException {
